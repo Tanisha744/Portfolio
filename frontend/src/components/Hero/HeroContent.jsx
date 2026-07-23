@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-
-import HeroButtons from "./HeroButtons";
-import SocialIcons from "./SocialIcons";
+// import SocialIcons from "./SocialIcons";
+// import HeroButtons from "./HeroButtons";
+// import TechChips from "./TechChips";
+// import HeroStats from "./HeroStats";
 
 const HeroContent = () => {
   return (
@@ -29,8 +30,7 @@ const HeroContent = () => {
             2000,
             "React Developer",
             2000,
-            "AI Engineer",
-            2000,
+            
           ]}
           repeat={Infinity}
         />
@@ -43,9 +43,10 @@ const HeroContent = () => {
         and modern cloud technologies.
       </p>
 
-      <HeroButtons />
-
+      {/* <HeroButtons />
+      <TechChips />
       <SocialIcons />
+      <HeroStats /> */}
     </motion.div>
   );
 };
