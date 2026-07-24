@@ -9,7 +9,7 @@ import Projects from "../components/Projects/Projects";
 import Cursor from "../components/Cursor/Cursor";
 import ScrollProgress from "../components/Common/ScrollProgress";
 import GridBackground from "../components/Background/GridBackground";
-import FloatingBlobs from "../components/Background/FloatingBlobs";
+// import FloatingBlobs from "../components/Background/FloatingBlobs";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
       <Cursor />
       <ScrollProgress />
       <GridBackground />
-      <FloatingBlobs />
+      {/* <FloatingBlobs /> */}
       <Navbar />
 
       <Hero />

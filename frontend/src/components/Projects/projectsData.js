@@ -1,3 +1,6 @@
+import travelopiaImage from "../../assets/images/Travelopia.png";
+import ProjectX from "../../assets/images/ProjectX.png";
+
 export const projects = [
   {
     id: 1,
@@ -12,13 +15,12 @@ export const projects = [
       "SQL Server",
       "Entity Framework",
       "JWT",
-      "Azure DevOps"
     ],
 
     // github: "",
     // live: "",
 
-    image: "/projects/projectx.jpg",
+    image: ProjectX,
 
     featured: true,
   },
@@ -44,7 +46,7 @@ export const projects = [
 
     live: "",
 
-    image: "/projects/travelopia.jpg",
+    image: travelopiaImage,
   },
 
   

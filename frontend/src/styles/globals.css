@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -13,13 +14,19 @@ body {
   background: #030712;
   color: #f8fafc;
   font-family: "Inter", sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+#root {
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+   /* outline: 1px solid red; */
 }
 
 h1,

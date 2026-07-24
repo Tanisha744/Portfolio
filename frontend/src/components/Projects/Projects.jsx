@@ -9,7 +9,7 @@ const Projects = () => {
       subtitle="PORTFOLIO"
       title="Featured Projects"
     >
-      <div className="grid gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8 h-[80vh]">
         {projects.map((project) => (
           <ProjectCard
             key={project.id}

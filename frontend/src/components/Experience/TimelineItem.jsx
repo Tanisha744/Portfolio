@@ -33,7 +33,7 @@ const TimelineItem = ({ item, last }) => {
         </div>
 
         {!last && (
-          <div className="mt-3 h-32 w-[2px] bg-white/10"></div>
+          <div className="mt-3 h-32 w-full max-w-[2px] bg-white/10"></div>
         )}
       </div>
 

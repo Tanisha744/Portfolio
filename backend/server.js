@@ -4,9 +4,15 @@ import cors from "cors";
 
 import connectDB from "./config/db.js";
 import contactRoutes from "./routes/contactRoutes.js";
+import resumeRoutes from "./routes/resumeRoutes.js";
+import projectRoutes from "./routes/projectRoutes.js";
 
 dotenv.config();
-
+console.log("EMAIL_USER:", process.env.EMAIL_USER);
+console.log(
+  "EMAIL_PASS:",
+  process.env.EMAIL_PASS ? "Loaded ✅" : "Not Loaded ❌"
+);
 connectDB();
 
 const app = express();
@@ -22,6 +28,9 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 
 app.use("/api/contact", contactRoutes);
+app.use("/api/resume", resumeRoutes);
+app.use("/api/projects", projectRoutes);
+
 
 // Health Check
 

@@ -5,10 +5,10 @@ import {
   FaCss3Alt,
   FaGitAlt,
   FaJava,
-  FaPython,
   FaDatabase,
   FaMicrosoft,
   FaDocker,
+  FaAngular,
 } from "react-icons/fa";
 
 import {
@@ -41,7 +41,7 @@ export const skills = [
       { name: ".NET", icon: SiDotnet, color: "text-violet-500" },
       { name: "Node.js", icon: FaNodeJs, color: "text-green-500" },
       { name: "Java", icon: FaJava, color: "text-red-500" },
-      { name: "Python", icon: FaPython, color: "text-yellow-400" },
+      { name: "Angular", icon: FaAngular, color: "text-red-500" },
     ],
   },
 

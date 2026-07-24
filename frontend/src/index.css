@@ -14,17 +14,20 @@
 
 *{
   margin:0;
+  overflow-x:clip;
   padding:0;
   box-sizing:border-box;
 }
 
 html{
   scroll-behavior:smooth;
+  overflow-x:clip;
 }
-
 body{
   background:var(--background);
   color:var(--text);
+  max-width:100%;
+  overflow-x:clip;
   font-family:"Inter",sans-serif;
   overflow-x:hidden;
 }

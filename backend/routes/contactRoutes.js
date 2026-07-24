@@ -18,6 +18,7 @@ router.post(
       .withMessage("Name is required"),
 
     body("email")
+      .trim()
       .isEmail()
       .withMessage("Valid email is required"),
 
@@ -28,8 +29,8 @@ router.post(
 
     body("message")
       .trim()
-      .isLength({ min: 10 })
-      .withMessage("Message should be at least 10 characters"),
+      .isLength({ min: 5 })
+      .withMessage("Message should be at least 5 characters"),
   ],
   submitContact
 );

@@ -10,7 +10,7 @@ const FocusList = () => {
         Current Focus
       </h3>
 
-      <div className="flex flex-row justify-center items-center gap-8">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
         {focusItems.map((item, index) => (
           <motion.div
             key={item}

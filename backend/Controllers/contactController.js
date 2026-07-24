@@ -5,12 +5,15 @@ import { validationResult } from "express-validator";
 // @desc    Submit Contact Form
 // @route   POST /api/contact
 // @access  Public
-
 export const submitContact = async (req, res) => {
   try {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
+      console.log("========== VALIDATION ERROR ==========");
+      console.log(req.body);
+      console.log(errors.array());
+
       return res.status(400).json({
         success: false,
         errors: errors.array(),
@@ -19,6 +22,7 @@ export const submitContact = async (req, res) => {
 
     const { name, email, subject, message } = req.body;
 
+    // Save message in MongoDB
     const newContact = await Contact.create({
       name,
       email,
@@ -26,32 +30,34 @@ export const submitContact = async (req, res) => {
       message,
     });
 
-    // Send Email Notification
+    console.log("✅ Contact saved to MongoDB");
+
+    // Send email
     await sendEmail(newContact);
+
+    console.log("✅ Email sent successfully");
 
     res.status(201).json({
       success: true,
       message: "Message sent successfully!",
     });
   } catch (error) {
+    console.error("========== SERVER ERROR ==========");
     console.error(error);
 
     res.status(500).json({
       success: false,
-      message: "Server Error",
+      message: error.message,
     });
   }
 };
 
 // @desc    Get All Contact Messages
 // @route   GET /api/contact
-// @access  Public (for now)
-
+// @access  Public
 export const getContacts = async (req, res) => {
   try {
-    const contacts = await Contact.find().sort({
-      createdAt: -1,
-    });
+    const contacts = await Contact.find().sort({ createdAt: -1 });
 
     res.status(200).json({
       success: true,
@@ -66,9 +72,9 @@ export const getContacts = async (req, res) => {
   }
 };
 
-// @desc Delete Contact
-// @route DELETE /api/contact/:id
-
+// @desc    Delete Contact Message
+// @route   DELETE /api/contact/:id
+// @access  Public
 export const deleteContact = async (req, res) => {
   try {
     const contact = await Contact.findById(req.params.id);
@@ -82,9 +88,9 @@ export const deleteContact = async (req, res) => {
 
     await contact.deleteOne();
 
-    res.json({
+    res.status(200).json({
       success: true,
-      message: "Message deleted",
+      message: "Message deleted successfully",
     });
   } catch (error) {
     res.status(500).json({

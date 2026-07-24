@@ -9,22 +9,22 @@ const About = () => {
       subtitle="ABOUT"
       title="Building software that solves real problems."
     >
-      <div className="grid items-center gap-16 lg:grid-cols-2">
+      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <ProfileCard />
 
         <div>
-          <h3 className="mb-6 text-4xl font-bold">
+          <h3 className="mb-5 text-3xl font-bold sm:text-4xl">
             Hi, I'm Tanisha 👋
           </h3>
 
-          <p className="mb-6 leading-8 text-slate-300">
+          <p className="mb-5 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
             I'm a final-year Computer Science Engineering
             student at Chitkara University with
             11 months of professional internship
             experience at Innova Solutions.
           </p>
 
-          <p className="mb-6 leading-8 text-slate-300">
+          <p className="mb-5 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
             I enjoy building scalable full-stack
             applications using React, ASP.NET Core,
             SQL Server, and modern cloud technologies.
@@ -33,7 +33,7 @@ const About = () => {
             experiences.
           </p>
 
-          <p className="leading-8 text-slate-300">
+          <p className="text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
             My goal is to build products that are
             fast, intuitive, and impactful while
             continuously learning new technologies.

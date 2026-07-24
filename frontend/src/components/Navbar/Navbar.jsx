@@ -30,19 +30,19 @@ const Navbar = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-5">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-8">
           {/* Logo */}
 
           <motion.h1
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold cursor-pointer tracking-wide"
+            className="cursor-pointer text-xl font-bold tracking-wide sm:text-2xl"
           >
-            Tanisha<span className="text-violet-500">.</span>
+            Tanisha<span className="text-violet-500"></span>
           </motion.h1>
 
           {/* Desktop */}
 
-          <div className="hidden md:flex gap-10">
+          <div className="hidden items-center gap-6 lg:gap-10 md:flex">
             {navigation.map((item) => (
               <Link
                 key={item.id}
@@ -52,7 +52,7 @@ const Navbar = () => {
                 offset={-80}
                 spy={true}
                 activeClass="text-violet-400"
-                className="cursor-pointer text-gray-300 hover:text-white transition duration-300"
+                className="cursor-pointer text-sm text-gray-300 transition hover:text-white lg:text-base"
               >
                 {item.title}
               </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white text-3xl"
+            className="text-3xl text-white md:hidden"
           >
             {isOpen ? <HiX /> : <HiOutlineMenuAlt3 />}
           </button>
@@ -79,9 +79,9 @@ const Navbar = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.4 }}
-            className="fixed right-0 top-0 w-72 h-screen bg-[#050816] backdrop-blur-xl z-40 p-10 md:hidden"
+            className="fixed right-0 top-0 z-40 h-screen w-[80%] max-w-xs bg-[#050816]/95 backdrop-blur-xl p-8 md:hidden"
           >
-            <div className="mt-20 flex flex-col gap-8">
+            <div className="mt-16 flex flex-col gap-6">
               {navigation.map((item) => (
                 <Link
                   key={item.id}
@@ -90,7 +90,7 @@ const Navbar = () => {
                   duration={700}
                   offset={-80}
                   onClick={() => setIsOpen(false)}
-                  className="text-2xl cursor-pointer hover:text-violet-400 transition"
+                  className="cursor-pointer text-xl transition hover:text-violet-400"
                 >
                   {item.title}
                 </Link>

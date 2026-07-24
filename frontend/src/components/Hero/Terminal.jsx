@@ -20,7 +20,14 @@ const Terminal = () => {
       transition={{
         duration: 0.8,
       }}
-      className="h-full rounded-3xl border border-white/10 bg-[#0F172A]/80 backdrop-blur-xl"
+      className="
+min-h-[560px]
+rounded-3xl
+border
+border-white/10
+bg-[#0F172A]/80
+backdrop-blur-xl
+"
     >
       {/* Header */}
 
@@ -40,7 +47,14 @@ const Terminal = () => {
 
       {/* Body */}
 
-      <div className="space-y-5 p-6">
+      <div
+className="
+space-y-5
+p-4
+sm:p-5
+lg:p-6
+"
+>
 
         <ProfileSection />
 

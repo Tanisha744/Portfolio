@@ -26,7 +26,7 @@ const AuroraBackground = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute right-0 top-40 h-[500px] w-[500px] rounded-full bg-violet-500/15 blur-[160px]"
+        className="absolute right-0 top-40 h-[500px] w-full max-w-[500px] rounded-full bg-violet-500/15 blur-[160px]"
       />
 
       <motion.div

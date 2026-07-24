@@ -88,8 +88,8 @@ const FooterLinks = () => {
             ".NET",
             "SQL Server",
             "MongoDB",
-            "Azure",
-            "AI"
+            "Angular",
+            "Java"
           ].map((tech) => (
             <span
               key={tech}

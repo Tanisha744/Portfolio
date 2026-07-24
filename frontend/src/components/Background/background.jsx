@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Background = () => {
   return (
-    <div className="fixed inset-0 -z-50 overflow-hidden bg-[#030712]">
+    <div className="fixed inset-0 -z-50 max-w-full overflow-hidden bg-[#030712]">
       {/* Purple Glow */}
       <motion.div
         animate={{
@@ -15,7 +15,7 @@ const Background = () => {
           repeatType: "mirror",
           ease: "easeInOut",
         }}
-        className="absolute top-[-150px] left-[-150px] h-[500px] w-[500px] rounded-full bg-violet-600/20 blur-[120px]"
+        className="absolute top-[-150px] left-[-150px] h-[500px] w-full max-w-[500px] rounded-full bg-violet-600/20 blur-[120px]"
       />
 
       {/* Cyan Glow */}
@@ -30,7 +30,7 @@ const Background = () => {
           repeatType: "mirror",
           ease: "easeInOut",
         }}
-        className="absolute bottom-[-200px] right-[-150px] h-[550px] w-[550px] rounded-full bg-cyan-500/20 blur-[140px]"
+        className="absolute bottom-[-200px] right-[-150px] h-[550px] w-full max-w-[550px] rounded-full bg-cyan-500/20 blur-[140px]"
       />
 
       {/* Pink Glow */}
@@ -45,7 +45,7 @@ const Background = () => {
           repeatType: "mirror",
           ease: "easeInOut",
         }}
-        className="absolute top-1/2 left-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-500/10 blur-[120px]"
+        className="absolute top-1/2 left-1/2 h-[350px] w-full max-w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-500/10 blur-[120px]"
       />
 
       {/* Grid Overlay */}

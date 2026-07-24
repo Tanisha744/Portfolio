@@ -42,7 +42,7 @@ const StackGrid = () => {
         Tech Stack
       </h3>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {techStack.map((tech, index) => (
           <motion.div
             key={tech.name}
